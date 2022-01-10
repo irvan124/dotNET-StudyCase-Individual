@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4f3f25ef-2fce-4f20-be78-94e782efaa93": {
+      "ProjectGuid": "4f3f25ef-2fce-4f20-be78-94e782efaa93",
+      "DisplayName": "AuthServer",
+      "ColorIndex": 0
+    },
+    "e84097d2-02ee-4151-9f74-83f8efdba8fe": {
+      "ProjectGuid": "e84097d2-02ee-4151-9f74-83f8efdba8fe",
+      "DisplayName": "Enrollment Service",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
