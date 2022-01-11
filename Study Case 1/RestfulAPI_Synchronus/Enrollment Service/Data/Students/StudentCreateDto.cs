@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Enrollment_Service.ValidationAttributes;
 
 namespace Enrollment_Service.Data.Students
 {
+    [StudentValidation]
     public class StudentCreateDto
     {
 

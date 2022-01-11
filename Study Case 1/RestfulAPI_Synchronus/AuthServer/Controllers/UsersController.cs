@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using AuthServer.Data;
 using AuthServer.DTO;
 using AuthServer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthServer.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+
+
     public class UsersController : ControllerBase
     {
         private readonly IUser _user;
@@ -19,11 +22,13 @@ namespace AuthServer.Controllers
         {
             _user = user;
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult<IEnumerable<UserDto>> GetAll()
         {
             return Ok(_user.GetAllusers());
         }
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> Registration(CreateUserDto input)
         {
@@ -38,11 +43,13 @@ namespace AuthServer.Controllers
                 throw new Exception(ex.Message);
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet("Role")]
         public ActionResult GetAllRoles()
         {
             return Ok(_user.GetAllRoles());
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost("Role")]
         public async Task<ActionResult> AddRole(CreateRoleDto input)
         {
@@ -57,6 +64,7 @@ namespace AuthServer.Controllers
                 throw new Exception(ex.Message);
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost("AddRoleToUser")]
         public async Task<ActionResult> AddUserToRole(string username, string role)
         {
@@ -71,12 +79,14 @@ namespace AuthServer.Controllers
                 throw new System.Exception(ex.Message);
             }
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet("RolesFromUser")]
         public async Task<ActionResult> GetRolesFromUser(string username)
         {
             var result = await _user.GetRolesFromUser(username);
             return Ok(result);
         }
+        [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<ActionResult<User>> Login(LoginUserDto input)
         {

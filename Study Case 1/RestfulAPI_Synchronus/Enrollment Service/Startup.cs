@@ -1,5 +1,9 @@
+using Enrollment_Service.Data.Courses;
+using Enrollment_Service.Data.Enrollments;
 using Enrollment_Service.Data.Students;
+using Enrollment_Service.Helpers;
 using Enrollment_Service.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,10 +13,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Enrollment_Service
@@ -30,14 +36,37 @@ namespace Enrollment_Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IStudent, StudentDAL>();
-            // services.AddScoped<>
+            services.AddScoped<IEnrollment, EnrollmentDAL>();
+            services.AddScoped<ICourse, CourseDAL>();
 
             services.AddDbContext<EnrollmentDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LocalConnection")));
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
-               //Add XMl : Content Negotiation
-               .AddXmlSerializerFormatters();
+            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            //Add XMl : Content Negotiation
+            //    .AddXmlSerializerFormatters();
+
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters =
+                new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -83,6 +112,7 @@ namespace Enrollment_Service
             app.UseAuthentication();
 
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

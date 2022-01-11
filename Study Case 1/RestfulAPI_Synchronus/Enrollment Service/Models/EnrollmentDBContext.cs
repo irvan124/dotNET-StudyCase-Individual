@@ -51,8 +51,9 @@ namespace Enrollment_Service.Models
                 entity.Property(e => e.CourseId).HasColumnName("CourseID");
 
                 entity.Property(e => e.Grade)
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.StudentId).HasColumnName("StudentID");
 

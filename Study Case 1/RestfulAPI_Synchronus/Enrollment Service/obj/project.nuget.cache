@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZLYkDT9OWF3DfzCWTRRRyOCcza+L1uIkkF4Qt0P9ca7/tLZJhCrAHAK+4a3Q3X8eH6g0d1GdSyspAc2UkXKUuA==",
+  "dgSpecHash": "badNOXgiYPNB2NwRl+zkFKw9jVG6XGMVoIWBZ3Rj4W5imMxfNXuCOP5zdTAMxBvPFWdDRRNkaOP2uf9E/wOYtw==",
   "success": true,
-  "projectFilePath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj",
+  "projectFilePath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gunsman\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

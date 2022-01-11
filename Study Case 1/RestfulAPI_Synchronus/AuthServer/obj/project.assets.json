@@ -5786,11 +5786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\AuthServer\\AuthServer.csproj",
+      "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\AuthServer\\AuthServer.csproj",
       "projectName": "AuthServer",
-      "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\AuthServer\\AuthServer.csproj",
+      "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\AuthServer\\AuthServer.csproj",
       "packagesPath": "C:\\Users\\Gunsman\\.nuget\\packages\\",
-      "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\AuthServer\\obj\\",
+      "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\AuthServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gunsman\\AppData\\Roaming\\NuGet\\NuGet.Config",

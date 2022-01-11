@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj": {}
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj": {}
   },
   "projects": {
-    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj": {
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj",
+        "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj",
         "projectName": "Enrollment Service",
-        "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj",
+        "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\Enrollment Service\\Enrollment Service.csproj",
         "packagesPath": "C:\\Users\\Gunsman\\.nuget\\packages\\",
-        "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\Studi Kasus 1 - RESTApi + Synchronus Communication\\RestfulAPI_Synchronus\\Enrollment Service\\obj\\",
+        "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\Enrollment Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gunsman\\AppData\\Roaming\\NuGet\\NuGet.Config",

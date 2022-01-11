@@ -6,11 +6,13 @@ using AutoMapper;
 using Enrollment_Service.Data.Students;
 using Enrollment_Service.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Enrollment_Service.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Roles = "Admin, Student")]
     public class StudentsController : ControllerBase
     {
         private readonly IStudent _student;
@@ -46,22 +48,22 @@ namespace Enrollment_Service.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<StudentDto>> UpdateStudent(int id, StudentCreateDto input)
         {
+
+            try
             {
-                try
-                {
-                    var student = _mapper.Map<Student>(input);
-                    var result = await _student.Update(id.ToString(), student);
-                    var dto = _mapper.Map<StudentDto>(result);
+                var student = _mapper.Map<Student>(input);
+                var result = await _student.Update(id.ToString(), student);
+                var dto = _mapper.Map<StudentDto>(result);
 
-                    return Ok(dto);
+                return Ok(dto);
 
-                }
-                catch (System.Exception ex)
-                {
-
-                    return BadRequest(ex.Message);
-                }
             }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
         }
         [HttpPost]
         public async Task<ActionResult<StudentDto>> AddStudent(StudentCreateDto input)

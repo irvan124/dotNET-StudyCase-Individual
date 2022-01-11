@@ -74,6 +74,7 @@ namespace Enrollment_Service.Data.Courses
                 result.Title = obj.Title;
                 result.Credits = obj.Credits;
                 await _context.SaveChangesAsync();
+                obj.CourseId = Convert.ToInt32(id);
 
                 return obj;
 

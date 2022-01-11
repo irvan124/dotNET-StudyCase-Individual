@@ -15,16 +15,31 @@ namespace Enrollment_Service.Data.Enrollments
         {
             _context = context;
         }
-        public Task Delete(string id)
+        public async Task Delete(string id)
         {
-            throw new NotImplementedException();
+            var result = await GetById(id);
+            if (result == null)
+            {
+
+                throw new Exception("Data not found");
+            }
+            try
+
+            {
+                _context.Enrollments.Remove(result);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException dbEx)
+            {
+
+                throw new Exception($"Error : {dbEx.Message}");
+            }
         }
 
         public async Task<IEnumerable<Enrollment>> GetAll()
         {
-            var results = await _context.Enrollments.Select(e => e).ToListAsync();
-
-            return results;
+            var result = await _context.Enrollments.Include(e => e.Student).Include(e => e.Course).AsNoTracking().ToListAsync();
+            return result;
         }
 
         public async Task<Enrollment> GetById(string id)
