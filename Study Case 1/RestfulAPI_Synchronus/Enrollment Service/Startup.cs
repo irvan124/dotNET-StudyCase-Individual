@@ -3,6 +3,8 @@ using Enrollment_Service.Data.Enrollments;
 using Enrollment_Service.Data.Students;
 using Enrollment_Service.Helpers;
 using Enrollment_Service.Models;
+using Enrollment_Service.SyncDataService;
+using Enrollment_Service.SyncDataService.Http;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,12 +27,15 @@ namespace Enrollment_Service
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; }
+
+        private readonly IWebHostEnvironment _env;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -39,7 +44,22 @@ namespace Enrollment_Service
             services.AddScoped<IEnrollment, EnrollmentDAL>();
             services.AddScoped<ICourse, CourseDAL>();
 
-            services.AddDbContext<EnrollmentDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LocalConnection")));
+            services.AddHttpClient<IPaymentDataClient, HttpPaymentDataClient>();
+
+            if (_env.IsProduction())
+            {
+                // Console.WriteLine("--> Using Sql Server Db");
+                // services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(
+                //     Configuration.GetConnectionString("PlatformsConn")
+                // ));
+            }
+            else
+            {
+                Console.WriteLine("--> Using Local Db");
+
+                services.AddDbContext<EnrollmentDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LocalConnection")));
+            }
+
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
@@ -68,7 +88,7 @@ namespace Enrollment_Service
                 };
             });
 
-            services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Enrollment_Service", Version = "v1" });

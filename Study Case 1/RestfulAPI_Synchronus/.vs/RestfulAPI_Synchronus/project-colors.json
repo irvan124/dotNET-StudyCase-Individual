@@ -10,7 +10,12 @@
       "ProjectGuid": "e84097d2-02ee-4151-9f74-83f8efdba8fe",
       "DisplayName": "Enrollment Service",
       "ColorIndex": 1
+    },
+    "5db56a27-6c84-4b6d-a35f-6d89fe7b9812": {
+      "ProjectGuid": "5db56a27-6c84-4b6d-a35f-6d89fe7b9812",
+      "DisplayName": "PaymentService",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

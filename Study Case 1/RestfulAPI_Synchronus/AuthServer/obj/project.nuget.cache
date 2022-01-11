@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PSQZd8eTuX4jD9mTCwP8s/tzgjZZDijbfFHImNtW4pPNC6dKaXFFUTp6Aln0R8AgS7xGO0swOe1evBcAkX9vTg==",
+  "dgSpecHash": "YzvVSicUOD/mdsk4Mzyao905q8kK6gjCMK9EbrqmuQ1iz4sg8eMjhpU+7yPnVEy8KwEw09xR9JgMpn7aB7YxcA==",
   "success": true,
-  "projectFilePath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\AuthServer\\AuthServer.csproj",
+  "projectFilePath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\AuthServer\\AuthServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gunsman\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
@@ -42,6 +42,7 @@
     "C:\\Users\\Gunsman\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Gunsman\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
