@@ -19,6 +19,7 @@ namespace TwittorAPI.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public bool? IsLocked { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Tweet> Tweets { get; set; }
