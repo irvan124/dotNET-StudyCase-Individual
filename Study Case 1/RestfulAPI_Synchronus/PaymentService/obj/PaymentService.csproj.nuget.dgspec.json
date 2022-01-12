@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj": {}
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj": {}
   },
   "projects": {
-    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj": {
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj",
+        "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj",
         "projectName": "PaymentService",
-        "projectPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj",
+        "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\PaymentService.csproj",
         "packagesPath": "C:\\Users\\Gunsman\\.nuget\\packages\\",
-        "outputPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\obj\\",
+        "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 1\\RestfulAPI_Synchronus\\PaymentService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gunsman\\AppData\\Roaming\\NuGet\\NuGet.Config",
