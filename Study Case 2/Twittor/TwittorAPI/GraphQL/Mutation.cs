@@ -119,7 +119,7 @@ namespace TwittorAPI.GraphQL
             [Service] IOptions<KafkaSettings> kafkaSettings
         )
         {
-            var currentUserId = _contextAccessor.HttpContext.User.FindFirst("UserId").Value;
+            var currentUserId = _contextAccessor.HttpContext.User.FindFirstValue("UserId");
             Console.WriteLine(currentUserId);
 
             var twit = new Tweet
