@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj": {}
+    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj": {}
   },
   "projects": {
-    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj": {
+    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj",
+        "projectUniqueName": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj",
         "projectName": "TwittorAPI",
-        "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj",
+        "projectPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\TwittorAPI.csproj",
         "packagesPath": "C:\\Users\\Gunsman\\.nuget\\packages\\",
-        "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\obj\\",
+        "outputPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\TwittorAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gunsman\\AppData\\Roaming\\NuGet\\NuGet.Config",

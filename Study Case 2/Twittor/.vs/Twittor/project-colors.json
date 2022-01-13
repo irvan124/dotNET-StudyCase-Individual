@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6ae505f1-aac3-4b21-8ac8-0c696c7e5986": {
+      "ProjectGuid": "6ae505f1-aac3-4b21-8ac8-0c696c7e5986",
+      "DisplayName": "TwittorAPI",
+      "ColorIndex": 0
+    },
+    "fc50438d-24a0-4fbc-92db-d2ce4526e2dc": {
+      "ProjectGuid": "fc50438d-24a0-4fbc-92db-d2ce4526e2dc",
+      "DisplayName": "KafkaCreateTopics",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "19989b12-d006-46d7-91b4-b2179b392f78": {
+      "ProjectGuid": "19989b12-d006-46d7-91b4-b2179b392f78",
+      "DisplayName": "KafkaCreateTopics",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

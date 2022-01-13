@@ -18,7 +18,7 @@ using static TwittorAPI.Data.PrepDB;
 
 namespace TwittorAPI
 {
-   
+
     public class Startup
     {
         public IConfiguration Configuration { get; }
@@ -34,6 +34,8 @@ namespace TwittorAPI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             var conString = Configuration.GetConnectionString("MyDatabase");
             if (_env.IsProduction())
             {

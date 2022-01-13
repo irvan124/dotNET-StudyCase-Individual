@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwittorAPI", "TwittorAPI\TwittorAPI.csproj", "{6AE505F1-AAC3-4B21-8AC8-0C696C7E5986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwittorAPI", "TwittorAPI\TwittorAPI.csproj", "{6AE505F1-AAC3-4B21-8AC8-0C696C7E5986}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaCreateTopics", "KafkaCreateTopics\KafkaCreateTopics.csproj", "{19989B12-D006-46D7-91B4-B2179B392F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaApp", "KafkaApp\KafkaApp.csproj", "{E8E1FCA7-E054-4431-B91C-3E5E9C5A3434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6AE505F1-AAC3-4B21-8AC8-0C696C7E5986}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AE505F1-AAC3-4B21-8AC8-0C696C7E5986}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AE505F1-AAC3-4B21-8AC8-0C696C7E5986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19989B12-D006-46D7-91B4-B2179B392F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19989B12-D006-46D7-91B4-B2179B392F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19989B12-D006-46D7-91B4-B2179B392F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19989B12-D006-46D7-91B4-B2179B392F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E1FCA7-E054-4431-B91C-3E5E9C5A3434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E1FCA7-E054-4431-B91C-3E5E9C5A3434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E1FCA7-E054-4431-B91C-3E5E9C5A3434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E1FCA7-E054-4431-B91C-3E5E9C5A3434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
