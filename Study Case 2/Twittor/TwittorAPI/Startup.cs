@@ -54,15 +54,16 @@ namespace TwittorAPI
 
             }
 
-
             services
               .AddGraphQLServer()
+              .AddAuthorization()
               .AddQueryType<Query>()
-              .AddMutationType<Mutation>()
-              .AddAuthorization();
+              .AddMutationType<Mutation>();
+
 
             services.Configure<TokenSettings>(Configuration.GetSection("TokenSettings"));
             services.Configure<KafkaSettings>(Configuration.GetSection("KafkaSettings"));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -80,6 +81,7 @@ namespace TwittorAPI
 
                });
 
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -91,6 +93,8 @@ namespace TwittorAPI
             }
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

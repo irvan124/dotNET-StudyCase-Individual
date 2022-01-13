@@ -36,7 +36,8 @@ namespace KafkaApp
                 Console.WriteLine("Connected");
                 var topics = new string[]
                 {
-                    "add-user"
+                    "add-user",
+                    "post-twit"
                 };
                 consumer.Subscribe(topics);
 
@@ -55,11 +56,10 @@ namespace KafkaApp
                                 User user = JsonConvert.DeserializeObject<User>(cr.Message.Value);
                                 dbcontext.Users.Add(user);
                             }
-                            // if (cr.Topic == "cart")
-                            // {
-                            //     Cart cart = JsonConvert.DeserializeObject<Cart>(cr.Message.Value);
-                            //     dbcontext.Carts.Add(cart);
-                            // }
+                            if (cr.Topic == "post-twit")
+                            {
+                                Console.Write(cr.Message.Value);
+                            }
                             await dbcontext.SaveChangesAsync();
                             Console.WriteLine("Data was saved into database");
                         }

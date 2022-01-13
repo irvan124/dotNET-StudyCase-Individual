@@ -19,8 +19,8 @@ namespace KafkaCreateTopics
             };
             var topics = new List<String>();
             topics.Add("logging");
-            topics.Add("post-tweet");
-            topics.Add("delete-tweet");
+            topics.Add("post-twit");
+            topics.Add("delete-twit");
             topics.Add("post-comment");
             topics.Add("add-user");
             topics.Add("update-user");
