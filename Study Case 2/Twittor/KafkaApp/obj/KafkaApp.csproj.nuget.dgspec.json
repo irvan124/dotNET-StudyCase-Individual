@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj": {}
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj": {}
   },
   "projects": {
-    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj": {
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj",
+        "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj",
         "projectName": "KafkaApp",
-        "projectPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj",
+        "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj",
         "packagesPath": "C:\\Users\\Gunsman\\.nuget\\packages\\",
-        "outputPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\obj\\",
+        "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gunsman\\AppData\\Roaming\\NuGet\\NuGet.Config",

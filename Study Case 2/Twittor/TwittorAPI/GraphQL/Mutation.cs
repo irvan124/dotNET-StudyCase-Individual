@@ -45,7 +45,7 @@ namespace TwittorAPI.GraphQL
             var result = await KafkaHelper.SendMessage(kafkaSettings.Value, "add-user", key, val);
             await KafkaHelper.SendMessage(kafkaSettings.Value, "logging", key, val);
 
-            var ret = new DataTransferStatus(result, "");
+            var ret = new DataTransferStatus(result, "Register Success");
             if (!result)
                 ret = new DataTransferStatus(result, "Failed to Submit Data");
 

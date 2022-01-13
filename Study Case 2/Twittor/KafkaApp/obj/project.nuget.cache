@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vZQE3VR4WJLNY8x9l/IWtqVzZjnoJMoqU1a/NApZ/bMH7I1iFC7TaiKFk3DgdGQSp87udbik3YJTlXU01CItdA==",
+  "dgSpecHash": "m2x3xGgGWIRMCXMbtvwS/9DBxg1YSCMv3XnsPp7liM9Qf84EXHuUL4tvinwXOUQWY8MEgLeXfnzoRHEfZG0SEQ==",
   "success": true,
-  "projectFilePath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj",
+  "projectFilePath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaApp\\KafkaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gunsman\\.nuget\\packages\\confluent.kafka\\1.8.2\\confluent.kafka.1.8.2.nupkg.sha512",
     "C:\\Users\\Gunsman\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

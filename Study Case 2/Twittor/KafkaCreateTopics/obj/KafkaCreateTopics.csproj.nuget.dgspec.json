@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj": {}
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj": {}
   },
   "projects": {
-    "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj": {
+    "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj",
+        "projectUniqueName": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj",
         "projectName": "KafkaCreateTopics",
-        "projectPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj",
+        "projectPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\KafkaCreateTopics.csproj",
         "packagesPath": "C:\\Users\\Gunsman\\.nuget\\packages\\",
-        "outputPath": "d:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\obj\\",
+        "outputPath": "D:\\IRVAN\\AGIT\\Learning .NET CORE\\Projects\\Studi Kasus mandiri\\dotNET - Study Case Individual\\Study Case 2\\Twittor\\KafkaCreateTopics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gunsman\\AppData\\Roaming\\NuGet\\NuGet.Config",
