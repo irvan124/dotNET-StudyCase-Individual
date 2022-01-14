@@ -5,7 +5,5 @@ using System.Threading.Tasks;
 
 namespace TwittorAPI.Inputs
 {
-    public record CreateTwitInput(string Text);
-
-
+    public record CreateRoleInput(string Name);
 }

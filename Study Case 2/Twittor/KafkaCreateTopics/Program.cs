@@ -18,14 +18,19 @@ namespace KafkaCreateTopics
 
             };
             var topics = new List<String>();
+            // Events
             topics.Add("logging");
+            // User Profiling          
+            topics.Add("add-user");
+            topics.Add("edit-user");
+            topics.Add("change-password");
+            // Roles
+            topics.Add("add-rolename");
+            topics.Add("update-userRole");
+
             topics.Add("post-twit");
             topics.Add("delete-twit");
             topics.Add("post-comment");
-            topics.Add("add-user");
-            topics.Add("update-user");
-            topics.Add("update-profile");
-            topics.Add("update-userRole");
             foreach (var topic in topics)
             {
                 using (var adminClient = new AdminClientBuilder(config).Build())

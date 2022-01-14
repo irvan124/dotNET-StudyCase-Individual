@@ -1,6 +1,7 @@
 ﻿using HotChocolate;
 using HotChocolate.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
@@ -22,11 +23,11 @@ namespace TwittorAPI.GraphQL
 
     public class Mutation
     {
-        private readonly IHttpContextAccessor _contextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public Mutation(IHttpContextAccessor contextAccessor)
+        public Mutation(IHttpContextAccessor httpContextAccessor)
         {
-            _contextAccessor = contextAccessor;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<DataTransferStatus> RegisterUserAsync(
@@ -105,11 +106,135 @@ namespace TwittorAPI.GraphQL
                 return await Task.FromResult(
                     new UserToken(new JwtSecurityTokenHandler().WriteToken(jwtToken),
                     expired.ToString(), null));
-                //return new JwtSecurityTokenHandler().WriteToken(jwtToken);
             }
 
             return await Task.FromResult(new UserToken(null, null, Message: "Username or password was invalid"));
         }
+
+        [Authorize(Roles = new[] { "MEMBER", "ADMIN" })]
+        public async Task<DataTransferStatus> EditProfileAsync(
+            RegisterUserInput input,
+
+            [Service] TwittorDBContext context,
+            [Service] IOptions<TokenSettings> tokenSettings,
+            [Service] IOptions<KafkaSettings> kafkaSettings
+        )
+        {
+            var currentUserId = _httpContextAccessor.HttpContext.User.FindFirstValue("UserId");
+
+            var user = new User();
+            user = context.Users.Where(u => u.UserId == Convert.ToInt32(currentUserId)).SingleOrDefault();
+
+            user.FullName = input.FullName;
+            user.Email = input.Email;
+            user.Username = input.UserName;
+
+
+            var key = "Edit-Profile -->" + DateTime.Now.ToString();
+            var val = JObject.FromObject(user).ToString(Formatting.None);
+            var result = await KafkaHelper.SendMessage(kafkaSettings.Value, "edit-user", key, val);
+            await KafkaHelper.SendMessage(kafkaSettings.Value, "logging", key, val);
+
+            var ret = new DataTransferStatus(result, "Edit profile Success");
+            if (!result)
+                ret = new DataTransferStatus(result, "Failed to edit profile");
+
+            return await Task.FromResult(ret);
+        }
+
+        [Authorize(Roles = new[] { "MEMBER", "ADMIN" })]
+        public async Task<DataTransferStatus> ChangePasswordAsync(
+            ChangePasswordInput input,
+
+            [Service] TwittorDBContext context,
+            [Service] IOptions<TokenSettings> tokenSettings,
+            [Service] IOptions<KafkaSettings> kafkaSettings
+        )
+        {
+            var currentUserId = _httpContextAccessor.HttpContext.User.FindFirstValue("UserId");
+
+            var user = new User();
+            user = context.Users.Where(u => u.UserId == Convert.ToInt32(currentUserId)).SingleOrDefault();
+
+            var valid = BCrypt.Net.BCrypt.Verify(input.currentPassword, user.Password);
+            if (valid)
+            {
+                user.Password = BCrypt.Net.BCrypt.HashPassword(input.newPassword);
+            }
+            else return new DataTransferStatus(false, "Password is incorrect");
+
+            var key = "Change-Password -->" + DateTime.Now.ToString();
+            var val = JObject.FromObject(user).ToString(Formatting.None);
+            var result = await KafkaHelper.SendMessage(kafkaSettings.Value, "edit-user", key, val);
+            await KafkaHelper.SendMessage(kafkaSettings.Value, "logging", key, val);
+
+            var ret = new DataTransferStatus(result, "Password successfuly updated");
+            if (!result)
+                ret = new DataTransferStatus(result, "Failed to update the Password");
+
+            return await Task.FromResult(ret);
+        }
+
+        [Authorize(Roles = new[] { "ADMIN" })]
+        public async Task<DataTransferStatus> LockUserAsync(
+            LockUserInput input,
+
+            [Service] TwittorDBContext context,
+            [Service] IOptions<TokenSettings> tokenSettings,
+            [Service] IOptions<KafkaSettings> kafkaSettings
+        )
+        {
+            var user = context.Users.Where(u => u.UserId == input.UserId).FirstOrDefault();
+            if (user == null)
+            {
+                return await Task.FromResult(new DataTransferStatus(false, "User is not found"));
+            }
+
+            user.IsLocked = input.IsLocked;
+
+            var key = "Lock-user -->" + DateTime.Now.ToString();
+            var val = JObject.FromObject(user).ToString(Formatting.None);
+            var result = await KafkaHelper.SendMessage(kafkaSettings.Value, "edit-user", key, val);
+            await KafkaHelper.SendMessage(kafkaSettings.Value, "logging", key, val);
+
+            var ret = new DataTransferStatus(result, "Lock privilage succesfully updated");
+            if (!result)
+                ret = new DataTransferStatus(result, "Failed update User Lock privilage");
+
+            return await Task.FromResult(ret);
+
+        }
+
+        public async Task<DataTransferStatus> CreateRoleAsync(
+            CreateRoleInput input,
+
+            [Service] TwittorDBContext context,
+            [Service] IOptions<TokenSettings> tokenSettings,
+            [Service] IOptions<KafkaSettings> kafkaSettings
+        )
+        {
+            var role = context.Roles.Where(r => r.Name.ToUpper() == input.Name.ToUpper()).SingleOrDefault();
+            if (role == null)
+            {
+                return await Task.FromResult(new DataTransferStatus(false, "Rolename is already exist"));
+            }
+
+            var newRolename = new Role { Name = input.Name };
+
+            var key = "Add-rolename -->" + DateTime.Now.ToString();
+            var val = JObject.FromObject(newRolename).ToString(Formatting.None);
+            var result = await KafkaHelper.SendMessage(kafkaSettings.Value, "add-rolename", key, val);
+            await KafkaHelper.SendMessage(kafkaSettings.Value, "logging", key, val);
+
+            var ret = new DataTransferStatus(result, "Rolename successfuly added");
+            if (!result)
+                ret = new DataTransferStatus(result, "Failed Add new Rolename");
+
+            return await Task.FromResult(ret);
+
+        }
+
+
         [Authorize(Roles = new[] { "MEMBER" })]
         public async Task<DataTransferStatus> PostTwtitAsync(
             CreateTwitInput input,
@@ -119,8 +244,8 @@ namespace TwittorAPI.GraphQL
             [Service] IOptions<KafkaSettings> kafkaSettings
         )
         {
-            var currentUserId = _contextAccessor.HttpContext.User.FindFirstValue("UserId");
-            Console.WriteLine(currentUserId);
+            var currentUserId = _httpContextAccessor.HttpContext.User.FindFirstValue("UserId");
+            // Console.WriteLine(currentUserId);
 
             var twit = new Tweet
             {

@@ -5,7 +5,5 @@ using System.Threading.Tasks;
 
 namespace TwittorAPI.Inputs
 {
-    public record CreateTwitInput(string Text);
-
-
+    public record LockUserInput(int UserId, bool IsLocked);
 }

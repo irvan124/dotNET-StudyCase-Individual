@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace TwittorAPI.Inputs
 {
-    public record CreateTwitInput(string Text);
-
+    public record ChangePasswordInput(string currentPassword, string newPassword);
 
 }
