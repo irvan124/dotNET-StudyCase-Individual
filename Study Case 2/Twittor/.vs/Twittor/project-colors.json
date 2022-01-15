@@ -20,7 +20,17 @@
       "ProjectGuid": "19989b12-d006-46d7-91b4-b2179b392f78",
       "DisplayName": "KafkaCreateTopics",
       "ColorIndex": 2
+    },
+    "e8e1fca7-e054-4431-b91c-3e5e9c5a3434": {
+      "ProjectGuid": "e8e1fca7-e054-4431-b91c-3e5e9c5a3434",
+      "DisplayName": "KafkaApp",
+      "ColorIndex": 3
+    },
+    "24d53f7f-e508-4782-ad1d-3417681204d9": {
+      "ProjectGuid": "24d53f7f-e508-4782-ad1d-3417681204d9",
+      "DisplayName": "KafkaListenerApp",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 5
 }
