@@ -10,6 +10,6 @@ namespace TwittorAPI.Input
         string FullName,
         string Email,
         string UserName,
-        string Password
+        string? Password
     );
 }

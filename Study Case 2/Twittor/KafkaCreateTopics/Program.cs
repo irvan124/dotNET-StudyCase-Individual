@@ -27,10 +27,10 @@ namespace KafkaCreateTopics
             // Roles
             topics.Add("add-rolename");
             topics.Add("update-userRole");
-
+            //Twits
             topics.Add("post-twit");
             topics.Add("delete-twit");
-            topics.Add("post-comment");
+            topics.Add("comment-twit");
             foreach (var topic in topics)
             {
                 using (var adminClient = new AdminClientBuilder(config).Build())

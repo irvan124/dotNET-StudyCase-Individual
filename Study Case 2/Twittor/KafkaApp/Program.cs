@@ -36,8 +36,15 @@ namespace KafkaApp
                 Console.WriteLine("Connected");
                 var topics = new string[]
                 {
+                     // User Profiling   
                     "add-user",
-                    "post-twit"
+                    "edit-user",
+                    "change-password",
+                    "update-userRole",
+                    // Twits
+                    "post-twit",
+                    "comment-twit",
+                    "delete-twit"
                 };
                 consumer.Subscribe(topics);
 
@@ -56,9 +63,35 @@ namespace KafkaApp
                                 User user = JsonConvert.DeserializeObject<User>(cr.Message.Value);
                                 dbcontext.Users.Add(user);
                             }
+                            if (cr.Topic == "edit-user")
+                            {
+                                User userUpdate = JsonConvert.DeserializeObject<User>(cr.Message.Value);
+                                dbcontext.Users.Update(userUpdate);
+                            }
+                            if (cr.Topic == "change-password")
+                            {
+                                User changePassword = JsonConvert.DeserializeObject<User>(cr.Message.Value);
+                                dbcontext.Users.Update(changePassword);
+                            }
                             if (cr.Topic == "post-twit")
                             {
-                                Console.Write(cr.Message.Value);
+                                Tweet twit = JsonConvert.DeserializeObject<Tweet>(cr.Message.Value);
+                                dbcontext.Tweets.Add(twit);
+                            }
+                            if (cr.Topic == "comment-twit")
+                            {
+                                Comment comment = JsonConvert.DeserializeObject<Comment>(cr.Message.Value);
+                                dbcontext.Comments.Add(comment);
+                            }
+                            if (cr.Topic == "update-userRole")
+                            {
+                                UserRole userRole = JsonConvert.DeserializeObject<UserRole>(cr.Message.Value);
+                                dbcontext.UserRoles.Add(userRole);
+                            }
+                            if (cr.Topic == "delete-twit")
+                            {
+                                Tweet tweet = JsonConvert.DeserializeObject<Tweet>(cr.Message.Value);
+                                dbcontext.Tweets.Remove(tweet);
                             }
                             await dbcontext.SaveChangesAsync();
                             Console.WriteLine("Data was saved into database");
