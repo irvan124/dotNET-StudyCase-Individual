@@ -48,10 +48,10 @@ namespace Enrollment_Service
 
             if (_env.IsProduction())
             {
-                // Console.WriteLine("--> Using Sql Server Db");
-                // services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(
-                //     Configuration.GetConnectionString("PlatformsConn")
-                // ));
+                Console.WriteLine("--> Using Sql Server Db");
+                services.AddDbContext<EnrollmentDBContext>(opt => opt.UseSqlServer(
+                    Configuration.GetConnectionString("EnrollmentConn")
+                ));
             }
             else
             {
@@ -116,8 +116,9 @@ namespace Enrollment_Service
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, EnrollmentDBContext context)
         {
+            context.Database.Migrate();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

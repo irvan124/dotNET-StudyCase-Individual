@@ -23,19 +23,32 @@ namespace AuthServer
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; }
 
+        private readonly IWebHostEnvironment _env;
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>
-                (options => options.UseSqlServer(Configuration.GetConnectionString("LocalConnection")));
-
+            if (_env.IsProduction())
+            {
+                Console.WriteLine("--> using Sql server Db");
+                services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(
+                  Configuration.GetConnectionString("AuthConn")
+                ));
+            }
+            else
+            {
+                Console.WriteLine("--> Using LocalDB");
+                services.AddDbContext<AppDbContext>
+                  (options => options.UseSqlServer(Configuration.GetConnectionString("LocalConnection")));
+            }
             //Add Rules for Sign up
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
@@ -55,12 +68,12 @@ namespace AuthServer
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                //Generate JWt
             }).AddJwtBearer(x =>
             {
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = true;
-                x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                x.TokenValidationParameters =
+                new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
@@ -98,8 +111,9 @@ namespace AuthServer
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext context)
         {
+            context.Database.Migrate();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -110,7 +124,7 @@ namespace AuthServer
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseAuthorization();
 

@@ -12,7 +12,7 @@ namespace Enrollment_Service.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin, Student")]
+    [Authorize(Roles = "Admin")]
     public class StudentsController : ControllerBase
     {
         private readonly IStudent _student;

@@ -72,7 +72,7 @@ namespace Enrollment_Service.Data.Enrollments
                 {
                     throw new Exception($"Student has not found");
                 }
-                result.EnrollmentId = obj.EnrollmentId;
+
                 result.CourseId = obj.CourseId;
                 result.StudentId = obj.StudentId;
                 result.Grade = obj.Grade;

@@ -38,10 +38,10 @@ namespace PaymentService
 
             if (_env.IsProduction())
             {
-                // Console.WriteLine("--> Using Sql Server Db");
-                // services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(
-                //     Configuration.GetConnectionString("PlatformsConn")
-                // ));
+                Console.WriteLine("--> Using Sql Server Db");
+                services.AddDbContext<PaymentDBContext>(opt => opt.UseSqlServer(
+                    Configuration.GetConnectionString("PaymentConn")
+                ));
             }
             else
             {
@@ -63,8 +63,9 @@ namespace PaymentService
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PaymentDBContext context)
         {
+            // context.Database.Migrate();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

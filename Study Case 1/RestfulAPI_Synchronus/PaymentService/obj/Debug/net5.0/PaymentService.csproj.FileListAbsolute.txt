@@ -1,5 +1,4 @@
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\appsettings.Development.json
-D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\appsettings.json
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\PaymentService.exe
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\PaymentService.deps.json
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\PaymentService.runtimeconfig.json
@@ -63,3 +62,4 @@ D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Cas
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\PaymentService\bin\Debug\net5.0\appsettings.Production.json

@@ -22,7 +22,7 @@ namespace AuthServer.Controllers
         {
             _user = user;
         }
-        [Authorize(Roles = "Admin")]
+
         [HttpGet]
         public ActionResult<IEnumerable<UserDto>> GetAll()
         {
@@ -43,7 +43,7 @@ namespace AuthServer.Controllers
                 throw new Exception(ex.Message);
             }
         }
-        [Authorize(Roles = "Admin")]
+
         [HttpGet("Role")]
         public ActionResult GetAllRoles()
         {

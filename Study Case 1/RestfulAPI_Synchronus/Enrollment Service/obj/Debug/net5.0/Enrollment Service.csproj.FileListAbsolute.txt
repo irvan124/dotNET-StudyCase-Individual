@@ -65,7 +65,6 @@ D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\Studi Kasus 1 - RE
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\Studi Kasus 1 - RESTApi + Synchronus Communication\RestfulAPI_Synchronus\Enrollment Service\obj\Debug\net5.0\Enrollment Service.pdb
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\Studi Kasus 1 - RESTApi + Synchronus Communication\RestfulAPI_Synchronus\Enrollment Service\obj\Debug\net5.0\Enrollment Service.genruntimeconfig.cache
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\bin\Debug\net5.0\appsettings.Development.json
-D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\bin\Debug\net5.0\appsettings.json
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\bin\Debug\net5.0\Enrollment Service.exe
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\bin\Debug\net5.0\Enrollment Service.deps.json
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\bin\Debug\net5.0\Enrollment Service.runtimeconfig.json
@@ -130,3 +129,4 @@ D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Cas
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\obj\Debug\net5.0\ref\Enrollment Service.dll
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\obj\Debug\net5.0\Enrollment Service.pdb
 D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\obj\Debug\net5.0\Enrollment Service.genruntimeconfig.cache
+D:\IRVAN\AGIT\Learning .NET CORE\Projects\Studi Kasus mandiri\dotNET - Study Case Individual\Study Case 1\RestfulAPI_Synchronus\Enrollment Service\bin\Debug\net5.0\appsettings.Production.json
